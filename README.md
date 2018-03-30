@@ -92,6 +92,28 @@ Após implementar seu acontecimento de café da manhã, adicione-o à lista de a
 
 ------------------
 
+## Mocks, Stubs e Spies
+
+Alguns testes podem se tornar mais complicados quando existem dependências externas, e eu tenho a sensação de que você está prestes a descobrir isso. Mas não se preocupe, neste caso existem 3 caras que podem te ajudar bastante:
+
+* **Mocks** são dublês de um objeto. Quando você não quer/não pode criar um determinado objeto mas precisa passá-lo como parâmetro para algum método, mocks são exatamente o que você precisa.
+
+* **Stubs** são dublês de métodos. Quando você não pode/não quer que um método seja chamado durante um teste, você pode criar um stub que será invocado no lugar do método original.
+
+* Um **Spy** é capaz de informar quantas vezes um determinado método foi chamado e quais parâmetros ele recebeu. Sua função é muito parecida com a do **Stub**, e ele é muito útil quando queremos testar uma unidade que tem interfaces com outros sistemas, como _WebServices_ ou mesmo algum _hardware_.
+
+#### Escrevendo o teste unitário antes
+
+Hora de experimentar o famigerado TDD enquanto enfrentamos um trânsito pesado. Ou não. Como o trânsito é caótico e imprevisível, nosso arquivo de trânsito terá uma premissa muito simples:
+
+* Independentemente de seu humor atual, você tem 42% de chances de ficar preso em um engarrafamento enquanto vai para o trabalho. Se ficar preso, perde alguns pontos de humor. Se não ficar, ganha um pontinho.
+
+Sinta-se à vontade para criar seus próprios métodos no arquivo `traffic.js`, mas lembre-se de escrever os testes **antes de qualquer coisa**.
+
+**Tempo do exercício:** 40 minutos.
+
+------------------
+
 [1]: http://www.npmjs.com/
 [2]: http://maven.apache.org/
 [3]: http://ant.apache.org/
