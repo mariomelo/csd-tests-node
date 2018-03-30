@@ -4,7 +4,7 @@ const {show} = require('./utils/event_helper')
 
 const start = async () => {
   console.log('Iniciando o dia de testes do CSD')
-  let humor = 0
+  let humor = 10
 
   let index = 1
   for (var event of DeveloperDay) {
