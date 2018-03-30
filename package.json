@@ -1,0 +1,25 @@
+{
+  "name": "csd-tests-node",
+  "version": "1.0.0",
+  "description": "Repositório para testes CSD em NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "csd",
+    "node",
+    "jest",
+    "tdd"
+  ],
+  "author": "Mário Melo",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^22.4.3"
+  },
+  "dependencies": {
+    "colors": "^1.2.1",
+    "prompt": "^1.0.0"
+  }
+}
