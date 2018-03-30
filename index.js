@@ -1,6 +1,7 @@
 const colors = require('colors')
 const DeveloperDay = [require('./events/despertar'), require('./events/cafe'), require('./events/traffic')]
 const {show} = require('./utils/event_helper')
+const extenso = require('./utils/extenso_helper')
 
 const start = async () => {
   console.log('Iniciando o dia de testes do CSD')
@@ -13,7 +14,7 @@ const start = async () => {
   }
 
   console.log('-----------------------------------------------'.rainbow)
-  console.log(`Humor final: ${humor}`.red.bold)
+  console.log(`Humor final: ${humor.toString().extenso()}`.red.bold)
   console.log('-----------------------------------------------'.rainbow)
 }
 

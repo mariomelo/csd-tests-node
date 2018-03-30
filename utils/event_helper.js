@@ -56,7 +56,7 @@ module.exports = {
     console.log('')
     console.log(outcome.message.bold)
     console.log('')
-    console.log(`Humor atual: ${new_humor}`.bold)
+    console.log(`Humor atual: ${new_humor.toString().extenso()}`.bold)
     console.log('')
 
     await goOn()
