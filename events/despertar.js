@@ -12,6 +12,7 @@ const getOptions = function() {
 }
 
 const getOutcome = function(humor, user_choice) {
+  if (user_choice === 3) console.log('ra')
   if (user_choice === 1)
     return {
       result: 2,

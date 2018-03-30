@@ -114,6 +114,38 @@ Sinta-se à vontade para criar seus próprios métodos no arquivo `traffic.js`, 
 
 ------------------
 
+## Code Coverage
+
+Você já deve ter notado que um relatório é exibido no console a cada vez que você roda os testes, certo? Esse relatório informa o resultado de cada teste e o percentual de sucesso de todos eles. Mas existe um outro relatório muito interessante que podemos obter através dos testes: o relatório de **cobertura de código**.
+
+#### Adicionando e entendendo mais sobre cobertura de código
+
+O **Jest** possui um mecanismo integrado para coletar a cobertura do código. Você pode conferir a sessão `jest` no arquivo `package.json` para entender melhor como a configuração foi feita.
+
+Agora rode comando `npm run test`. O relatório de cobertura será exibido no console e exportado em formato HTML para a pasta `__code_coverage__`. Dê uma conferida no relatório gerado em HTML!
+
+O relatório de cobertura é uma excelente maneira de descobrir situações que passaram despercebidas em nossos testes. Por exemplo: *o que acontece se alguém informar um número de opção inexistente em um acontecimento?*.
+
+## RTD: Real Time Development
+
+***Real Time Development*** é um conceito que prega o feedback instantâneo de testes e análise estática de código. Exatamente da mesma forma como a maioria das IDE's compila automaticamente seu código sem que você precise clicar no botão *build*.
+
+Esse conceito é ainda mais interessante quando trabalhamos com linguagens dinâmicas, onde o compilador é menos restritivo. Mas o feedback dos testes é importante em qualquer linguagem, afinal:
+
+> O compilador consegue garantir que o código que você escreveu está aderente às regras sintáticas da linguagem de programação utilizada. Os testes garantem que seu código está aderente às regras de negócio de seu produto.
+
+Um novo comando foi criado para você experimentar o RTD:
+
+`npm run tdd`
+
+Rode este comando em um terminal antes de começar a próxima etapa. O comando não será finalizado: ele ficará monitorando seus arquivos e rodando os testes novamente sempre que você salvar algo.
+
+Caso queira, você pode personalizar seu ambiente RTD no arquivo `package.json` utilizando as opções disponíveis na documentação do [Jest][4].
+
+Agora... **Experimente o RTD**. Teremos duas Sprints de 25 minutos para implementar os 4 acontecimentos restantes. As regras do jogo serão definidas por cada equipe.
+
+**Tempo do exercício:** 1 hora.
+
 [1]: http://www.npmjs.com/
 [2]: http://maven.apache.org/
 [3]: http://ant.apache.org/
