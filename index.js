@@ -1,5 +1,5 @@
 const colors = require('colors')
-const DeveloperDay = [require('./events/despertar')]
+const DeveloperDay = [require('./events/despertar'), require('./events/cafe')]
 const {show} = require('./utils/event_helper')
 
 const start = async () => {

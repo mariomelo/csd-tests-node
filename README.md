@@ -67,7 +67,30 @@ Já existem também testes para a rotina do desenvolvedor! Para roda-los, basta 
 
 Com esse comando rodamos os testes existentes para nosso projeto. No momento temos um único teste para a rotina `despertar`.
 
-Dê uma olhada no arquivo `__tests__/despertar.js` e tente implementar seu primeiro teste para a função `getOpcoes` da classe `Despertar`.
+Dê uma olhada no arquivo `__tests__/despertar.js` e tente implementar seu primeiro teste para a função `getOptions`.
+
+------------------
+
+## TDD (Ou quase)
+
+#### Implementando a rotina do café da manhã e seu teste logo depois
+
+Para o café da manhã, vamos fazer algo um pouco diferente. Você terá duas opções: um café **light** com frutas e um café **americano** com bacon, ovos, bacon, calabresa, bacon e bacon. Mas dessa vez a pontuação ganha irá variar de acordo com o seu humor atual.
+
+* Para o café **light**:
+ * Se sua pontuação de humor atual for inferior a estiver abaixo de 10, comer pouco só vai te deixar mais mal-humorado. Então você perde mais alguns pontos de humor (a seu critério).
+ * Caso seu humor esteja acima de 10, você vai ficar ainda mais feliz por conseguir se manter na dieta! Ganhe alguns pontos de humor a seu critério.
+
+*  Para o café **americano**:
+ * Se seu humor está abaixo de 10 um café reforçado com bacon pode ser exatamente o que você precisa para reverter a situação. Ganhe alguns pontos de humor a seu critério.
+ * Caso seu humor esteja acima de 10, comer demais logo de manhã pode trazer aquele peso na consciência... Penalize seu humor a seu critério.
+
+
+Após implementar seu acontecimento de café da manhã, adicione-o à lista de acontecimentos no início do arquivo `index.js` e rode a aplicação com o comando `npm start`.
+
+**Hora de escrever o teste!** O café da manhã tem mais variações e dependências que o acontecimento anterior, então seus testes serão um pouco mais complicados.
+
+------------------
 
 [1]: http://www.npmjs.com/
 [2]: http://maven.apache.org/
