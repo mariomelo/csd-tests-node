@@ -146,6 +146,31 @@ Agora... **Experimente o RTD**. Teremos duas Sprints de 25 minutos para implemen
 
 **Tempo do exercício:** 1 hora.
 
+------------------
+
+## Red-Green-**Refactor**
+
+Testes são importantíssimos para facilitar a refatoração de código, pois deixam o desenvolvedor mais livra para alterar o código sem o eterno medo de estragar o que já estava funcionando. É assim que funciona o ciclo Red-Green-**Refactor**.
+
+* **RED**: Você escreve um teste que não passa, pois a implementação ainda não foi realizada.
+* **GREEN**: Você faz o que sabe fazer de melhor: implementa a solução e faz o teste escrito anteriormente passar.
+* **REFACTOR**: Como temos o teste para garantir o funcionamento de nossa implementação, podemos aprimorar o código escrito e tornar futuras manutenções ainda mais fáceis.
+
+É hora de praticar
+
+#### Refatorando a impressão por extenso com testes com testes
+
+Um novo arquivo `extenso_helper.js` foi adicionado ao projeto. Trata-se de um código de baixa qualidade que recebe um número como parâmetro e o escreve por extenso. Se você rodar nossa aplicação, verá que o resultado final agora é escrito por extenso.
+
+É hora de:
+
+* Escrever testes para validar se essa classe realmente funciona para todos os casos. Que tal números negativos?
+
+* Refatorar a classe tranquilamente enquanto seus testes garantem o sono de hoje a noite.
+
+**Tempo do exercício:** 1 hora.
+
+
 [1]: http://www.npmjs.com/
 [2]: http://maven.apache.org/
 [3]: http://ant.apache.org/
