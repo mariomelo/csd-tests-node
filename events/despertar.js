@@ -12,8 +12,18 @@ const getOptions = function() {
 }
 
 const getOutcome = function(humor, user_choice) {
-  if (user_choice === 1) return 2
-  else return -2
+  if (user_choice === 1)
+    return {
+      result: 2,
+      message:
+        '135 milissegundos. O despertador não toca mais. 2,3 segundos e você está de pé após um rápido movimento de kung-fu. O horário não é aquele que você está acostumado a acordar, mas você se adapta imediatamente, como água.',
+    }
+  else
+    return {
+      result: -2,
+      message:
+        'Sua trépida mão esquerda tenta em vão calar o smartphone, mas a insônia consumiu o melhor de suas habilidades motoras. As memórias da noite chuvosa de domingo são turvas, mas o sabor amargo de bile e azia constante antecipam como será essa longa segunda-feira.',
+    }
 }
 
 module.exports = {

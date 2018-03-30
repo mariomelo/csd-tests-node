@@ -1,13 +1,12 @@
 const colors = require('colors')
 const prompt = require('prompt')
 
-prompt.message = 'Escolha uma opção'.cyan
-
 const getUserInput = event => {
   return new Promise(resolve => {
     let max_option = -1,
       min_option = 1000
 
+    prompt.message = 'Escolha uma opção'.cyan
     event.getOptions().forEach(option => {
       min_option = option.id > min_option ? min_option : option.id
       max_option = option.id < max_option ? max_option : option.id
@@ -21,6 +20,14 @@ const getUserInput = event => {
         else console.log(error.red)
       }
     )
+  })
+}
+
+const goOn = () => {
+  return new Promise(resolve => {
+    prompt.message = 'Continue'
+    prompt.start()
+    prompt.get([{name: 'go', required: false, description: 'Pressione ENTER para continuar'}], () => resolve())
   })
 }
 
@@ -43,7 +50,16 @@ module.exports = {
 
     let user_choice = await getUserInput(event)
 
-    let new_humor = humor + event.getOutcome(humor, user_choice)
+    let outcome = event.getOutcome(humor, user_choice)
+    let new_humor = humor + outcome.result
+
+    console.log('')
+    console.log(outcome.message.bold)
+    console.log('')
+    console.log(`Humor atual: ${new_humor}`.bold)
+    console.log('')
+
+    await goOn()
 
     return new_humor
   },
